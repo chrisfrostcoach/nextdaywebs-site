@@ -13,8 +13,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Inter+Tight:ital,wght@0,500..800;1,500..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/assets/index-CzY7RWPu.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-M63N0u54.css">
+    <script>
+      // Apply saved theme/language before first paint to avoid a flash
+      try {
+        var t = localStorage.getItem('theme')
+        if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches))
+          document.documentElement.classList.add('dark')
+        var l = localStorage.getItem('lang')
+        if (l) document.documentElement.lang = l
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="/assets/index-Dg8RqI5F.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Cnl7ojCb.css">
   </head>
   <body>
     <div id="root"></div>
